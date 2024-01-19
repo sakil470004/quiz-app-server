@@ -26,9 +26,9 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     client.connect();
     console.log("mongo Connected Successfully");
-    const DB = client.db("quiz-app");
-    const questionCollection = DB.collection("questions");
-    const userCollection = DB.collection("users-data");
+    const DB = await client.db("quiz-app");
+    const questionCollection = await DB.collection("questions");
+    const userCollection =  await DB.collection("users-data");
     // const taskCollection = client.db("system_2").collection("task");
 
     // status
